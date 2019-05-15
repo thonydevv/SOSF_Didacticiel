@@ -1,20 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 
 //Ecran Tactile
 export default class Ecran_Tactile extends React.Component {
-  constructor(){
-    super()
-    const img1 = require('../Images/Red_Circle(small).png');
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: true
+    };
   }
-  _showImageFunc = () => {
-    alert('HELLO WORLD');
+  _showHiddenImg = () => {
+    this.setState({show: !this.state.show})
+    if (this.state.show === true) {
+      return(
+      <Image source = {require('../Images/Red_Circle(small).png')}/>)
+    }else{
+      return
+    }
   }
 
   render() {
-
+    console.log(this.state.show)
     return (
-      <TouchableOpacity style={styles.container} onPress={this._showImageFunc}>
+      <TouchableOpacity style={styles.container} onPress={this._showHiddenImg}>
         <Text>
           Qu'est ce qu'un écran tactile ?
         </Text>
