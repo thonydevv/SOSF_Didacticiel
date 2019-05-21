@@ -3,6 +3,7 @@ import { StyleSheet, Text } from 'react-native';
 
 //Indications du haut "TOUCHEZ LA PARTIE QUE VOUS SOUHAITEZ VOIR OU REVOIR"
 export default class HomeScreen extends React.Component {
+  
   render() {
     return(
       <Text style={styles.texte}>

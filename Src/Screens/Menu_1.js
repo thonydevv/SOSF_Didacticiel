@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Button} from 'react-native';
 
 import Texte_Du_Haut from '../Components/Texte_Du_Haut';
 import Indications from '../Components/Indications';
 
 //Menu 1
 export default class Menu_1 extends React.Component {
+
+  _previousPage = () => {
+    this.props.navigation.navigate('HomeScreen');
+  }
+
   render() {
 
     return (
@@ -15,25 +20,26 @@ export default class Menu_1 extends React.Component {
         <Text>1ère partie</Text>
         <Text>INTERAGIR AVEC L'ECRAN </Text>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Ecran_Tactile')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Ecran1_Tactile')}>
           <Text>Qu'est-ce qu'un écran tactile</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Type4_Toucher')}>
           <Text>LE TOUCHER COURT</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Type7_Toucher')} >
           <Text>LE TOUCHER LONG</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Le_Glisser')} >
           <Text>LE GLISSER</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Le_Zoom')} >
           <Text>LE ZOOM</Text>
         </TouchableOpacity>
+        <Button title={'REVENIR SUR LA PAGE PRINCIPALE'} onPress={this._previousPage} />
       </View>
     );
   }

@@ -15,24 +15,28 @@ export default class Menu_2 extends React.Component {
         <Text>2ème partie</Text>
         <Text>LE VOCABULAIRE DE BASE</Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Ecran_Accueil')} >
           <Text>L'ECRAN D'ACCUEIL</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Applications')} >
           <Text>LES APPLICATIONS</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Icones')} >
           <Text>LES ICONES</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Menu')} >
           <Text>LE MENU</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Internet')} >
           <Text>INTERNET</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Vocabulaire_Train')} >
+          <Text>EXERCER-VOUS</Text>
         </TouchableOpacity>
       </View>
     );
