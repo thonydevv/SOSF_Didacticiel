@@ -15,13 +15,10 @@ export default class Menu_3 extends React.Component {
         <Text>3ème partie</Text>
         <Text>INTERNET ET LA CONNEXION WIFI</Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Internet')} >
           <Text>Les différentes utilités d'Internet</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
-          <Text>Comment obtenir une connexion sur sa tablette ?</Text>
-        </TouchableOpacity>
       </View>
     );
   }

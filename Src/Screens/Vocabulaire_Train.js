@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, Button } from 'react-native';
+import Draggable from 'react-native-draggable';
 
 // Vocabulaire de base : Entrainement premier screen...
-export default class Vocabulaire_Train extends React.Component {
+export default class Vocabulaire_Train2 extends React.Component {
 
   _nextPage = () => {
-    this.props.navigation.navigate('Menu_2');
+    this.props.navigation.navigate('Vocabulaire_Train2')
   }
+
   render() {
 
     return (
@@ -15,6 +17,14 @@ export default class Vocabulaire_Train extends React.Component {
         <Text>Sur l'écran à gauche, replacez les mots en rouge dans les cadres 
         correspondants. Pour cela, touchez le mot choisi, et glissez-le jusqu'au
         cadre choisi</Text>
+        <Image source={require('../Images/desktop_tablet.jpg')}/>
+        <Draggable renderSize={56} renderColor='black' offsetX={0}  offsetY={600} renderText="ECRAN D'ACCUEIL" pressDrag={()=>alert('touched!!')}/> 
+        <Draggable renderSize={56} renderColor='black' offsetX={100} offsetY={600} renderText='ICONE' pressDrag={()=>alert('touched!!')}/> 
+        <Draggable renderSize={56} renderColor='black' offsetX={200} offsetY={600} renderText='INTERNET' pressDrag={()=>alert('touched!!')}/>
+        <Draggable renderSize={56} renderColor='black' offsetX={-200}  offsetY={450} renderText="GLISSER ICI !" pressDrag={()=>alert('touched!!')}/> 
+        <Draggable renderSize={56} renderColor='black' offsetX={0} offsetY={450} renderText='GLISSER ICI !' pressDrag={()=>alert('touched!!')}/> 
+        <Draggable renderSize={56} renderColor='black' offsetX={200} offsetY={450} renderText='GLISSER ICI !' pressDrag={()=>alert('touched!!')}/>
+        <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage} />
       </View>
     );
   }
@@ -25,5 +35,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -300,
   },
 });

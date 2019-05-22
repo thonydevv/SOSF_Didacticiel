@@ -43,6 +43,11 @@ import Vocabulaire_Menu2 from '../Screens/Vocabulaire_Menu2';
 import Vocabulaire_Internet from '../Screens/Vocabulaire_Internet';
 import Vocabulaire_Internet2 from '../Screens/Vocabulaire_Internet2';
 import Vocabulaire_Internet3 from '../Screens/Vocabulaire_Internet3';
+import Vocabulaire_Train from '../Screens/Vocabulaire_Train';
+import Vocabulaire_Train2 from '../Screens/Vocabulaire_Train2';
+import Vocabulaire_Bravo from '../Screens/Vocabulaire_Bravo';
+import Internet from '../Screens/Internet';
+import Internet2 from '../Screens/Internet2';
 
 const MainNavigator = createStackNavigator({
   HomeScreen: { screen: HomeScreen },
@@ -87,7 +92,12 @@ const MainNavigator = createStackNavigator({
   Vocabulaire_Menu2: { screen: Vocabulaire_Menu2 },
   Vocabulaire_Internet: { screen: Vocabulaire_Internet },
   Vocabulaire_Internet2: { screen: Vocabulaire_Internet2 },
-  Vocabulaire_Internet3: { screen: Vocabulaire_Internet3 }
+  Vocabulaire_Internet3: { screen: Vocabulaire_Internet3 },
+  Vocabulaire_Train: { screen: Vocabulaire_Train },
+  Vocabulaire_Train2: { screen: Vocabulaire_Train2 },
+  Vocabulaire_Bravo: { screen: Vocabulaire_Bravo },
+  Internet: { screen: Internet },
+  Internet2: { screen: Internet2 }
 
 });
 

@@ -6,7 +6,7 @@ export default class HomeScreen extends React.Component {
   
   render() {
     return (
-      <Text style={styles.texte}>
+      <Text style={styles.texte} >
         APPRENDRE À UTILISER UNE TABLETTE
       </Text>
     );
@@ -14,7 +14,7 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  texte: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

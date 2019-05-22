@@ -6,8 +6,8 @@ import Texte_Du_Haut from '../Components/Texte_Du_Haut'
 
 //HomeScreen page principale
 export default class HomeScreen extends React.Component {
-  render() {
 
+  render() {
     return (
       <View style={styles.container}>
         <Texte_Du_Haut/>
