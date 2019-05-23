@@ -1,22 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Header } from 'react-native-elements';
 
 //Texte du haut "APPRENDRE À UTILISER UNE TABLETTE"
-export default class HomeScreen extends React.Component {
+export default class Texte_Du_Haut extends React.Component {
   
   render() {
     return (
-      <Text style={styles.texte} >
-        APPRENDRE À UTILISER UNE TABLETTE
-      </Text>
+      <Header 
+      statusBarProps={{ barStyle: 'light-content' }}
+      color={'#008b8b'}
+      placement="left"
+      centerComponent={{ text: 'APPRENDRE A UTILISER UNE TABLETTE', style: { color: '#fff', fontFamily: 'Roboto', fontSize: 30 }}}
+      containerStyle={{ backgroundColor: '#008b8b' }}
+      />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  texte: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

@@ -1,20 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 //Indications du haut "TOUCHEZ LA PARTIE QUE VOUS SOUHAITEZ VOIR OU REVOIR"
-export default class HomeScreen extends React.Component {
+export default class Indications extends React.Component {
   
   render() {
     return(
-      <Text style={styles.texte}>
-        Touchez la partie que vous souhaitez voir ou revoir
-      </Text>
+      <View style={styles.container} >
+      <Text style={styles.texte}>Touchez la partie que vous souhaitez voir ou revoir !</Text>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  texte: {
+  container: {
+    borderWidth: 1,
+    borderColor: 'black',
+    height: 60,
+    justifyContent: 'center',
+    marginTop: 20
+  },
 
+  texte: {
+    fontFamily: 'Roboto',
+    fontSize: 25,
+    color:'black',
+    fontWeight: 'bold',
   }
 })
