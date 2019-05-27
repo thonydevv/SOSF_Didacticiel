@@ -7,7 +7,7 @@ export default class Ecran3_Tactile_Non extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Text>Appuyer sur NON si vous n'avez pas compris ce que nous venons de voir</Text>
+      <Text style={styles.t1} >Appuyer sur <Text style={styles.oui} >OUI</Text> si vous avez compris ce que nous venons de voir</Text>
       </View>
     );
   }
@@ -19,4 +19,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  t1: {
+    fontSize: 30,
+    color: 'black',
+    fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: '#a9a9a9',
+    backgroundColor: '#a9a9a9'
+  },
+
+  oui: {
+    fontSize: 30,
+    color: '#9932cc',
+    fontFamily: 'Roboto',
+  }
+
 });
