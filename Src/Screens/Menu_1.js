@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   t1: {
     fontSize: 30,
     color: '#0000ff',

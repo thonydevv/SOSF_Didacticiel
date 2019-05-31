@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity} from 'react-native';
 import Slider from '@react-native-community/slider';
+
+import Differents_Types_Touchers from '../Components/Differents_Types_Touchers';
 
 //Ecran Le_Glisser4 "Encore une fois de gauche à droite !..."
 export default class Le_Glisser4 extends React.Component {
@@ -23,34 +25,54 @@ export default class Le_Glisser4 extends React.Component {
   render() {
     if (this.state.slideDone == false){
     return (
+
       <View style={styles.container}>
+
+        <Differents_Types_Touchers/>
+
+        <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+          <Image source={require('../Images/home_button.png')} />
+        </TouchableOpacity>
+
         <Text>3- LE GLISSER</Text>
         <Text>Essayons le glisser !</Text>
         <Text>Encore une fois de gauche à droite !</Text>
+
         <Slider style={{width: 200, height: 100}} 
           minimumValue={0}
           maximumValue={10}
-          onSlidingComplete={this._slideComplete}
-        /> 
+          onSlidingComplete={this._slideComplete}/> 
+
         <Text>Encore une fois de gauche à droite !</Text>
       </View>
+
     );}else{
-      return (      
+      return (
+    
         <View style={styles.container}>
-        <Text>3- LE GLISSER</Text>
-        <Text>Essayons le glisser !</Text>
-        <Text>Faites glisser, avec votre doigt, délicatement et sans le relever
-        de l'écran, le rond violet le long de la ligne grise ci_dessous, de gauche à
-        droite. Relevez le doigt au bout de la ligne. Essayez plusieurs fois</Text>
-        <Slider style={{width: 200, height: 100}} 
-          minimumValue={0}
-          maximumValue={10}
-          onSlidingComplete={this._slideComplete}
-        /> 
-        <Text>Réésayez, toujours sur la ligne violette, mais cette fois-ci de droite
-        à gauche. Essayez plusieurs fois.</Text>
-        <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage} />
-      </View>
+
+          <Differents_Types_Touchers/>
+
+          <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+            <Image source={require('../Images/home_button.png')} />
+          </TouchableOpacity>
+
+          <Text>3- LE GLISSER</Text>
+          <Text>Essayons le glisser !</Text>
+          <Text>Faites glisser, avec votre doigt, délicatement et sans le relever
+          de l'écran, le rond violet le long de la ligne grise ci_dessous, de gauche à
+          droite. Relevez le doigt au bout de la ligne. Essayez plusieurs fois</Text>
+
+          <Slider style={{width: 200, height: 100}} 
+            minimumValue={0}
+            maximumValue={10}
+            onSlidingComplete={this._slideComplete}/>
+
+          <Text>Réésayez, toujours sur la ligne violette, mais cette fois-ci de droite
+          à gauche. Essayez plusieurs fois.</Text>
+
+          <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
+        </View>
       )}
     }
   }
@@ -61,4 +83,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  homebutton: {
+    marginLeft: 550
+  }
+
 });

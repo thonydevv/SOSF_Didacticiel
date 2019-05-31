@@ -12,9 +12,11 @@ export default class Menu_3 extends React.Component {
       <View style={styles.container}>
 
         <Texte_Du_Haut/>
+
         <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
           <Image source={require('../Images/home_button.png')} />
         </TouchableOpacity>
+
         <Indications/>
         
         <Text style={styles.t1} >3ème partie</Text>

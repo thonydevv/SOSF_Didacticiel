@@ -23,16 +23,16 @@ export default class Type6a_Toucher extends React.Component {
         <View style={styles.container2}>
 
           <View style={styles.container1}>
-          <Text style={styles.t1}>1- LE TOUCHER COURT</Text>
-          <Text style={styles.t2}>Essayons le toucher court !</Text>
-          <Text style={styles.t3}>Touchez le rond rouge à droite</Text>
-          <Image style={styles.fleche} source={require('../Images/fleche4.png')}/>
+            <Text style={styles.t1}>1- LE TOUCHER COURT</Text>
+            <Text style={styles.t2}>Essayons le toucher court !</Text>
+            <Text style={styles.t4}>Touchez le rond rouge à droite</Text>
+            <Image style={styles.fleche} source={require('../Images/fleche4.png')}/>
           </View>
           
           <View>
-          <TouchableOpacity style={styles.img}>
-          <Image source={require('../Images/Red_Circle(small).png')}/> 
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.img}>
+            <Image source={require('../Images/Red_Circle(small).png')}/> 
+            </TouchableOpacity>
           </View>
 
         </View>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 450,
+    marginBottom: 360,
   },
 
   container1: {
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
 
   t1: {
     marginTop: 50,
+    marginBottom: 50,
     fontSize: 40,
     color: 'black',
     fontFamily: 'Roboto',
@@ -79,12 +80,25 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
   },
 
   t3: {
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
+  },
+
+  t4: {
+    fontSize: 30,
+    color: 'black',
+    fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
+    width: 270
   },
 
   img: {

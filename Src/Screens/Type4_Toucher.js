@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 
 import Differents_Types_Touchers from '../Components/Differents_Types_Touchers'
 
@@ -26,6 +26,10 @@ export default class Type4_Toucher extends React.Component {
 
         <Differents_Types_Touchers/>
 
+        <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+          <Image source={require('../Images/home_button.png')} />
+        </TouchableOpacity>
+
         <Text style={styles.t3} >Sur une tablette il existe plusieurs types de touchers : le toucher court,
         le toucher long, le glisser, le zoom, etc...</Text>
 
@@ -42,8 +46,8 @@ export default class Type4_Toucher extends React.Component {
         <Text style={styles.t1} >Sur une tablette il existe plusieurs types de touchers : le toucher court,
         le toucher long, le glisser, le zoom, etc...</Text>
 
-        <View style={styles.v1} >
-          <Text style={styles.t2} >Appuyer sur ce bouton pour accéder à la page suivante.</Text>
+        <View style={styles.v1}>
+          <Text style={styles.t2}>Appuyer sur ce bouton pour accéder à la page suivante.</Text>
           <Image style={styles.img} source={require('../Images/fleche2.png')}/>
           <Button style={styles.b1} title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
         </View>
@@ -97,6 +101,10 @@ const styles = StyleSheet.create({
   
   img: {
     marginTop: 27
+  },
+
+  homebutton: {
+    marginLeft: 550
   }
 
 });

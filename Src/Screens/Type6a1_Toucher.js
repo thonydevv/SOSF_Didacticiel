@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, TouchableHighlight } f
 import Differents_Types_Touchers from '../Components/Differents_Types_Touchers';
 
 //Ecran 6 "Essayons le toucher court ! toucher le rond ruge à droite..."
-export default class Type6a_Toucher extends React.Component {
+export default class Type6a1_Toucher extends React.Component {
 
   _shortPress = () => {
     this.props.navigation.navigate('Type6a2_Toucher');
@@ -25,7 +25,7 @@ export default class Type6a_Toucher extends React.Component {
         <View style={styles.container1}>
           <Text style={styles.t1}>1- LE TOUCHER COURT</Text>
           <Text style={styles.t2}>Essayons le toucher court !</Text>
-          <Text style={styles.t3}>Touchez le rond rouge à droite</Text>
+          <Text style={styles.t4}>Touchez le rond rouge à droite</Text>
           <Image style={styles.fleche} source={require('../Images/fleche4.png')}/>
         </View>
 
@@ -45,8 +45,8 @@ export default class Type6a_Toucher extends React.Component {
       </View>
 
       <View>
-        <Text>Parfait ! Encore une fois avec le rond orange ?</Text>
-        <TouchableHighlight onPress={this._shortPress} onLongPress={this._longPress}> 
+        <Text style={styles.t3} >Parfait ! Encore une fois avec le rond orange ?</Text>
+        <TouchableHighlight style={styles.img1} onPress={this._shortPress} onLongPress={this._longPress}> 
         <Image source={require('../Images/orange_circle.jpg')} /> 
         </TouchableHighlight>
       </View>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 450,
+    marginBottom: 156,
   },
 
   container1: {
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
 
   t1: {
     marginTop: 50,
+    marginBottom: 50,
     fontSize: 40,
     color: 'black',
     fontFamily: 'Roboto',
@@ -86,12 +87,25 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
   },
 
   t3: {
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
+  },
+
+  t4: {
+    fontSize: 30,
+    color: 'black',
+    fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
+    width: 270
   },
 
   img: {

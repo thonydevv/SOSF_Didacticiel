@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-//Les différentes utilités d'Internet first screen..."
+//Les différentes utilités d'Internet second screen avec schéma..."
 export default class Internet2 extends React.Component {
 
   constructor(props){
@@ -24,18 +24,19 @@ export default class Internet2 extends React.Component {
   }
 
   render() {
-    setTimeout(() => {this.setState({timePassed: true})}, 2000);
-    setTimeout(() => {this.setState({timePassed1: true})}, 3000);
-    setTimeout(() => {this.setState({timePassed2: true})}, 4000);
-    setTimeout(() => {this.setState({timePassed3: true})}, 5000);
-    setTimeout(() => {this.setState({timePassed4: true})}, 6000);
-    setTimeout(() => {this.setState({timePassed5: true})}, 7000);
-    setTimeout(() => {this.setState({timePassed6: true})}, 8000);
-    setTimeout(() => {this.setState({timePassed7: true})}, 9000);
-    setTimeout(() => {this.setState({timePassed8: true})}, 10000);
+    setTimeout(() => {this.setState({timePassed: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed1: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed2: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed3: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed4: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed5: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed6: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed7: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed8: true})}, 1000);
 
       return (
-        <View>
+
+        <View style={styles.container}>
         {this.state.timePassed == true ? (<Text>INTERNET</Text>) : null}
         {this.state.timePassed1 == true ? (<Text>est capté par : Une BOX INTERNET ou une CLE 4G</Text>) : null}
         {this.state.timePassed2 == true ? (<Text>Leur utilisation nécessite un abonnement mensuel auprès de l'opérateur de votre choix: SFR, Bouygues, Télécom, Orange, Free, etc...</Text>) : null}
@@ -47,8 +48,8 @@ export default class Internet2 extends React.Component {
         {this.state.timePassed8 == true ? (<Text>Pour avoir utiliser les applications qui nécessitent une connexion à Internet pour fonctionner. Exemples: -Youtube -Gmail -Hangouts -Internet</Text>) : null}
         <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage} />
         </View>
-      )
 
+      )
   }
 }
 
@@ -58,4 +59,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
 });

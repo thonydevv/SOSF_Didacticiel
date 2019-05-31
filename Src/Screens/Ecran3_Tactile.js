@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 
 import Ecran3_Tactile_Oui from '../Components/Ecran3_Tactile_Oui';
 import Ecran3_Tactile_Non from '../Components/Ecran3_Tactile_Non';
+import TDH_Ecran_Tactile from '../Components/TDH_Ecran_Tactile';
 
-//Qu'est ce qu'un écran tactile ? touchableOpacity
+//Qu'est ce qu'un écran tactile ? Avez-vous compris ?
 export default class Ecran3_Tactile extends React.Component {
   
   constructor(props){
@@ -23,11 +24,17 @@ export default class Ecran3_Tactile extends React.Component {
   }
 
   render() {
-    setTimeout(() => {this.setState({timePassed: true})}, 1000);
+    setTimeout(() => {this.setState({timePassed: true})}, 3000);
     if (this.state.timePassed == false){
     return (
 
       <View style={styles.container}>
+
+        <TDH_Ecran_Tactile/>
+
+        <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+          <Image source={require('../Images/home_button.png')} />
+        </TouchableOpacity>
 
         <View style={styles.v1} >
           <Text style={styles.t1} >Avez-vous compris ?</Text>
@@ -40,9 +47,15 @@ export default class Ecran3_Tactile extends React.Component {
     );}else{
       return(
 
-      <View style={styles.container}>
+      <View style={styles.container2}>
 
-        <View style={styles.v1} >
+        <TDH_Ecran_Tactile/>
+
+        <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
+          <Image source={require('../Images/home_button.png')} />
+        </TouchableOpacity>
+
+        <View style={styles.v3} >
           <Text style={styles.t1} >Avez-vous compris ?</Text>
           <Button title="OUI" onPress={this._onPressYes}/>
           <Button title="NON" onPress={this._onPressNo}/>
@@ -66,7 +79,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 320
+  },
+
+  container2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 170
   },
 
   t1: {
@@ -74,7 +95,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Roboto',
     borderWidth: 1,
-    borderColor: '#a9a9a9'
+    borderColor: '#a9a9a9',
   },
 
   v1: {
@@ -84,7 +105,16 @@ const styles = StyleSheet.create({
 
   v2: {
     flexDirection:'row',
-    marginBottom: 400
+    marginBottom: 240
   },
+
+  v3: {
+    flexDirection:'row',
+    marginTop: 150
+  },
+
+  homebutton: {
+    marginLeft: 550
+  }
 
 });

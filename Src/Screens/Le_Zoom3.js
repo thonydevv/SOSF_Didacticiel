@@ -38,4 +38,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  t1: {
+    fontSize: 30,
+    color: 'black',
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
+    marginTop: 40,
+    marginBottom: 100,
+    marginRight: 400
+  },
+
+  t2: {
+    fontSize: 30,
+    color: 'black',
+    fontFamily: 'Roboto',
+    marginLeft: 15,
+    marginRight: 15,
+    borderWidth: 1,
+    borderColor: '#a9a9a9',
+    marginBottom: 20
+  },
+
 });

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 558,
+    marginBottom: 500,
   },
 
   container1: {
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
 
   t1: {
     marginTop: 50,
+    marginBottom: 50,
     fontSize: 40,
     color: 'black',
     fontFamily: 'Roboto',
@@ -71,12 +72,17 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
   },
 
   t3: {
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
+    width: 270
   },
 
   img: {

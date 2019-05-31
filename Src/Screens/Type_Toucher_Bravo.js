@@ -12,10 +12,11 @@ export default class Type_Toucher_Bravo_Toucher extends React.Component {
 
   render() {
     return (
+
       <View style={styles.container}>
         <Image source={require('../Images/smiley_souriant.png')}/>
-        <Text>BRAVO !</Text>
-        <Text>Vous avez réussi cette tâche</Text>
+        <Text style={styles.t1}>BRAVO !</Text>
+        <Text style={styles.t1}>Vous avez réussi cette tâche</Text>
       </View>
     );
   }
@@ -27,4 +28,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  t1: {
+    color: '#b8860b',
+    fontWeight: 'bold',
+    fontSize: 30,
+  }
+
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
-import Differents_Types_Touchers from '../Components/Differents_Types_Touchers'
+import Differents_Types_Touchers from '../Components/Differents_Types_Touchers';
 
 //Ecran 5 "Le TOUCHER COURT est assez rapide, il suffit que le doigt ..."
 export default class Type5_Toucher extends React.Component {
@@ -98,6 +98,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
     fontFamily: 'Roboto',
+    borderWidth: 1,
+    borderColor: 'grey',
   },
 
   t3: {
