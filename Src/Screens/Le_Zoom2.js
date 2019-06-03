@@ -6,7 +6,7 @@ import ImageZoom from 'react-native-image-pan-zoom';
 import Differents_Types_Touchers from '../Components/Differents_Types_Touchers';
 
 //Ecran Le_Zoom2 "Zoom In..."
-export default class Le_Zoom1 extends React.Component {
+export default class Le_Zoom2 extends React.Component {
 
   constructor(props){
     super(props);
@@ -21,15 +21,23 @@ export default class Le_Zoom1 extends React.Component {
     this.props.navigation.navigate('Le_Zoom3');
   }
 
+  componentWillUnmount = () => {
+    if (this.timerHandle) {
+      clearTimeout(this.timerHandle);
+      this.timerHandle = 0;
+  }
+};
+
   render() {
 
-    setTimeout(() => {this.setState({timePassed: true})}, 1000);
-    setTimeout(() => {this.setState({timePassed1: true})}, 2000);
-    setTimeout(() => {this.setState({timePassed2: true})}, 3000);
+    setTimeout(() => {this.setState({timePassed: true}); this.timerHandle = 0;}, 1000);
+    setTimeout(() => {this.setState({timePassed1: true}); this.timerHandle = 0;}, 2000);
+    setTimeout(() => {this.setState({timePassed2: true}); this.timerHandle = 0;}, 3000);
 
     return (
 
       <View style={styles.container}>
+
         <Differents_Types_Touchers/>
 
         <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
@@ -57,7 +65,9 @@ export default class Le_Zoom1 extends React.Component {
         </ImageZoom>
 
         <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage} />
+        
       </View>
+
     );
   }
 }

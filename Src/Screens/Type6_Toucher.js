@@ -18,6 +18,7 @@ export default class Type6_Toucher extends React.Component {
     return (
 
       <View style={styles.container}>
+
         <Differents_Types_Touchers/>
 
         <View style={styles.container2}>

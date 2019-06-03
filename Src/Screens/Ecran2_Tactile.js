@@ -28,9 +28,11 @@ export default class Ecran2_Tactile extends React.Component {
 
       <View style={styles.container}>
         <TDH_Ecran_Tactile/>
+
         <TouchableOpacity style={styles.homebutton} onPress={() => this.props.navigation.navigate('HomeScreen')}>
           <Image source={require('../Images/home_button.png')} />
         </TouchableOpacity>
+        
         <Text style={styles.t1} >Donc lorsque vous souhaitez exécuter une action avec la tablette, il suffit de toucher le mot, ou le signe correspondant à l'action</Text>
       </View>
 

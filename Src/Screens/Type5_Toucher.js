@@ -23,19 +23,22 @@ export default class Type5_Toucher extends React.Component {
     return (
 
       <View style={styles.container3}>
+
       <Differents_Types_Touchers/>
+
       <View style={styles.container2}>
-      <View style={styles.v1} >
-      <Text style={styles.t3} >1- LE TOUCHER COURT</Text>
-      <Text style={styles.t2} >Le TOUCHER COURT est assez rapide, il suffit que le doigt entre en contact
-      avec l'écran pour que le toucher soit prise en compte par la tablette. Le doigt
-      ne doit pas toucher l'écran pendant plus de 5 secondes</Text>
-      <Text style={styles.t2} >C'est l'interaction avec l'écran la plus répandu. S'il n'est pas spécifié
-      quoi que ce soit, le toucher doit être COURT.</Text>
-      </View>
-      <View style={styles.t2} >
-      <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
-      </View>
+        <View style={styles.v1} >
+          <Text style={styles.t3} >1- LE TOUCHER COURT</Text>
+          <Text style={styles.t2} >Le TOUCHER COURT est assez rapide, il suffit que le doigt entre en contact
+          avec l'écran pour que le toucher soit prise en compte par la tablette. Le doigt
+          ne doit pas toucher l'écran pendant plus de 5 secondes</Text>
+          <Text style={styles.t2} >C'est l'interaction avec l'écran la plus répandu. S'il n'est pas spécifié
+          quoi que ce soit, le toucher doit être COURT.</Text>
+        </View>
+
+        <View style={styles.t2} >
+          <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
+        </View>
       </View>
       </View>
 
@@ -43,23 +46,27 @@ export default class Type5_Toucher extends React.Component {
       return(
 
         <View style={styles.container3}>
-        <Differents_Types_Touchers/>
-        <View style={styles.container}>
-        <View style={styles.v1} >
-        <Text style={styles.t3} >1- LE TOUCHER COURT</Text>
-        <Text style={styles.t2} >Le TOUCHER COURT est assez rapide, il suffit que le doigt entre en contact
-        avec l'écran pour que le toucher soit prise en compte par la tablette. Le doigt
-        ne doit pas toucher l'écran pendant plus de 5 secondes</Text>
-        <Text style={styles.t2} >C'est l'interaction avec l'écran la plus répandu. S'il n'est pas spécifié
-        quoi que ce soit, le toucher doit être COURT.</Text>
-        </View>
-        <View style={styles.v2} >
-        <Text style={styles.t1} >Appuyer sur ce bouton pour accéder à la page suivante.</Text>
-        <Image style={styles.img} source ={require('../Images/fleche3.png')}/>
-        <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
-        
-        </View>
-        </View>
+
+          <Differents_Types_Touchers/>
+
+          <View style={styles.container}>
+
+            <View style={styles.v1}>
+              <Text style={styles.t3}>1- LE TOUCHER COURT</Text>
+              <Text style={styles.t2}>Le TOUCHER COURT est assez rapide, il suffit que le doigt entre en contact
+              avec l'écran pour que le toucher soit prise en compte par la tablette. Le doigt
+              ne doit pas toucher l'écran pendant plus de 5 secondes</Text>
+              <Text style={styles.t2}>C'est l'interaction avec l'écran la plus répandu. S'il n'est pas spécifié
+              quoi que ce soit, le toucher doit être COURT.</Text>
+            </View>
+            
+            <View style={styles.v2}>
+              <Text style={styles.t1}>Appuyer sur ce bouton pour accéder à la page suivante.</Text>
+              <Image style={styles.img} source ={require('../Images/fleche3.png')}/>
+              <Button title={'PAGE SUIVANTE ->'} onPress={this._nextPage}/>
+            </View>
+            
+          </View>
         </View>
       )
     }
