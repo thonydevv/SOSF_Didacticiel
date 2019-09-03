@@ -6,9 +6,11 @@ export default class Indications extends React.Component {
   
   render() {
     return(
+
       <View style={styles.container} >
-      <Text style={styles.texte}>Touchez la partie que vous souhaitez voir ou revoir !</Text>
+        <Text style={styles.texte}>Touchez la partie que vous souhaitez voir ou revoir !</Text>
       </View>
+      
     );
   }
 }

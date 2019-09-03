@@ -8,6 +8,7 @@ export default class Internet extends React.Component {
 
   constructor(props){
     super(props);
+
     this.state = {
       timePassed: false,
       timePassed1: false,

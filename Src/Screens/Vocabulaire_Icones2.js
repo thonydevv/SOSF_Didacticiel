@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, TouchableOpacity, Image} from 'react-native';
+import { StyleSheet, View, Text, Button, TouchableOpacity, Image } from 'react-native';
 
 import TDH_Vocabulaire_De_Base from '../Components/TDH_Vocabulaire_De_Base';
 
